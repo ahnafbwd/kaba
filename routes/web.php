@@ -1,0 +1,128 @@
+<?php
+
+use App\Http\Controllers\Dashbaorduser\TugasController;
+use App\Http\Controllers\Dashboardadmin\DashboardAdminController;
+use App\Http\Controllers\Dashboardadmin\DashboardAngkatanController;
+use App\Http\Controllers\Dashboardadmin\DashboardJadwalController;
+use App\Http\Controllers\Dashboardadmin\DashboardKelompokController;
+use App\Http\Controllers\Dashboardadmin\DashboardMateriController;
+use App\Http\Controllers\Dashboardadmin\DashboardPendaftaranController;
+use App\Http\Controllers\Dashboardadmin\DashboardPengajaranController;
+use App\Http\Controllers\Dashboardadmin\DashboardPengajarController;
+use App\Http\Controllers\Dashboardadmin\DashboardProgramController;
+use App\Http\Controllers\Dashboardadmin\DashboardSiswaController;
+use App\Http\Controllers\Dashboardadmin\DashboardTingkatController;
+use App\Http\Controllers\Dashboardadmin\DashboardUserController;
+use App\Http\Controllers\Dashboardadmin\DashboardWaktuController;
+use App\Http\Controllers\Dashboardpengajar\PengajarAbsensiController;
+use App\Http\Controllers\Dashboardpengajar\PengajarJadwalController;
+use App\Http\Controllers\Dashboardpengajar\PengajarKelasController;
+use App\Http\Controllers\Dashboardpengajar\PengajarMateriController;
+use App\Http\Controllers\Dashboardpengajar\PengajarTugasController;
+use App\Http\Controllers\Dashboarduser\JadwalController;
+use App\Http\Controllers\Dashboarduser\KelasController;
+use App\Http\Controllers\Dashboarduser\MateriController;
+use App\Http\Controllers\Dashboarduser\PendaftaranController;
+use App\Http\Controllers\Dashboarduser\ProgramController;
+use App\Http\Controllers\Homepage\ContactController;
+use App\Http\Controllers\Homepage\HomeController;
+use App\Http\Controllers\Homepage\ProgramController as programhome;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', function () {
+    return view('homepage.about');
+});
+Route::get('/contact', function () {
+    return view('homepage.contact');
+});
+Route::resource('/program', programhome::class)->names('program.home');
+
+Route::post('/forms/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+
+
+Route::get('/admin/dashboard/index', function () {
+    return view('admin.dashboard.tes');
+});
+
+Route::get('/user/dashboard', function () {
+    return view('user.dashboard.index');
+})->middleware(['auth', 'verified'])->name('home');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/user/dashboard', [HomeController::class, 'userdashboard'])->name('user.dashboard');
+    Route::resource('/user/kelas', KelasController::class);
+    Route::resource('/user/materi', MateriController::class);
+    Route::get('/user/materi/{kode_materi}/download', [MateriController::class, 'download'])->name('modul.download');
+    Route::resource('/user/program', ProgramController::class);
+    Route::resource('/user/pendaftaran', PendaftaranController::class);
+    Route::put('/user/pendaftaran/{pendaftaran}/update-kelompok', 'PendaftaranController@updateKelompok')->name('pendaftaran.updateKelompok');
+    // Route::post('/user/pendaftaran/midtrans-callback', [PendaftaranController::class,'callback']);
+    Route::get('/user/program/{program}/konfirmasi-pendaftaran', [ProgramController::class, 'konfirmasiPendaftaran'])->name('program.konfirmasi');
+    Route::get('/user/program/konfirmasi-pendaftaran/{kode_kelas}', [ProgramController::class, 'getKelasByKode']);
+    Route::resource('/user/jadwal', JadwalController::class);
+    Route::resource('/user/tugas', TugasController::class);
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+
+//admin
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard.index');
+})->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
+
+Route::middleware('auth:admin')->group(function () {
+    Route::resource('/admin/dashboard/user', DashboardUserController::class);
+    Route::resource('/admin/dashboard/pengajar', DashboardPengajarController::class);
+    Route::resource('/admin/dashboard/admin', DashboardAdminController::class);
+    Route::resource('/admin/dashboard/angkatan', DashboardAngkatanController::class);
+    Route::resource('/admin/dashboard/tingkat', DashboardTingkatController::class);
+    Route::resource('/admin/dashboard/kelompok', DashboardKelompokController::class);
+    Route::resource('/admin/dashboard/program', DashboardProgramController::class);
+    Route::resource('/admin/dashboard/materi', DashboardMateriController::class);
+    Route::get('/admin/dashboard/materi/{kode_materi}/download', [DashboardMateriController::class, 'download'])->name('materi.download');
+    Route::resource('/admin/dashboard/waktu', DashboardWaktuController::class);
+    Route::resource('/admin/dashboard/pengajaran', DashboardPengajaranController::class);
+    Route::resource('/admin/dashboard/pendaftaran', DashboardPendaftaranController::class);
+    Route::resource('/admin/dashboard/jadwal', DashboardJadwalController::class);
+    Route::resource('/admin/dashboard/siswa', DashboardSiswaController::class);
+    Route::get('/admin/profile', [ProfileController::class, 'editadmin'])->name('admin.profile.edit');
+    Route::patch('/admin/profile', [ProfileController::class, 'updateadmin'])->name('admin.profile.update');
+    Route::delete('/admin/profile', [ProfileController::class, 'destroyadmin'])->name('admin.profile.destroy');
+});
+
+require __DIR__.'/adminauth.php';
+
+//pengajar
+
+Route::get('/pengajar/dashboard', function () {
+    return view('pengajar.dashboard.index');
+})->middleware(['auth:pengajar', 'verified'])->name('pengajar.dashboard');
+
+Route::middleware('auth:pengajar')->group(function () {
+    Route::resource('/pengajar/jadwal', PengajarJadwalController::class);
+    Route::resource('/pengajar/absensi', PengajarAbsensiController::class);
+    Route::resource('/pengajar/tugas', PengajarTugasController::class);
+    Route::resource('/pengajar/materi', PengajarMateriController::class);
+    Route::resource('/pengajar/kelas', PengajarKelasController::class);
+    Route::get('/pengajar/profile', [ProfileController::class, 'editpengajar'])->name('pengajar.profile.edit');
+    Route::patch('/pengajar/profile', [ProfileController::class, 'updatepengajar'])->name('pengajar.profile.update');
+    Route::delete('/pengajar/profile', [ProfileController::class, 'destroypengajar'])->name('pengajar.profile.destroy');
+});
+
+require __DIR__.'/pengajarauth.php';
