@@ -7,7 +7,7 @@
             <nav class="">
                 <ol class="breadcrumb border border-gray bg-dark">
                     <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/dashboard/tingkat" class="text-white">Tingkat</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/tingkat" class="text-white">Tingkat</a></li>
                     <li class="breadcrumb-item active text-white">Create</li>
                 </ol>
             </nav>
@@ -34,7 +34,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <form method="post" action="/admin/dashboard/tingkat/">
+                                <form method="post" action="/admin/tingkat/">
                                     @csrf
                                     <div class="row">
                                         <!-- Nama Tingkat -->

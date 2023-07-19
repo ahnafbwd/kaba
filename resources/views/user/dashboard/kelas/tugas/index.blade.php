@@ -57,13 +57,21 @@
                             <td>Ustadz {{ $tugas->pengajar->nama_lengkap }}</td>
                             <td>{{ $tugas->nama_tugas }}</td>
                             <td>{{ $tugas->deskripsi }}</td>
-                            <td>{{ $tugas->keterangan }}</td>
-                            <td>{{ $tugas->status_tugas }}</td>
+                            <td>
+                                @php
+                                    $pengumpulan = $tugas->pengumpulan->first(); // Ambil pengumpulan pertama berdasarkan tugas
+                                    $status_pengumpulan = $pengumpulan ? $pengumpulan->status_pengumpulan : 'Belum Dikumpulkan';
+                                @endphp
+                                {{ $status_pengumpulan }}
+                            </td>
                             <td>{{ $tugas->tanggal_pengumpulan }}</td>
-                            <td><a href="{{ "/user/tugas/" . $tugas->kode_tugas }}" class="btn btn-primary mt-4 btn-block bg-dark"></a></td>
+                            <td>
+                                <a href="{{ "/user/tugas/" . $tugas->kode_tugas }}" class="btn btn-info btn-block bg-info btn-sm">Lihat Detail</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
+
             </table>
         </div>
     </div>

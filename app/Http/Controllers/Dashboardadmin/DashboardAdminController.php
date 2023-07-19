@@ -55,7 +55,7 @@ class DashboardAdminController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('/admin/dashboard/admin')->with('success','Admin berhasil ditambahkan');
+        return redirect('/admin/manager')->with('success','Admin berhasil ditambahkan');
     }
 
     /**
@@ -109,7 +109,7 @@ class DashboardAdminController extends Controller
         // Update data pengguna
         $admin->update($validatedData);
 
-        return redirect('/admin/dashboard/admin')->with('success', 'Data admin berhasil diperbarui');
+        return redirect('/admin/manager')->with('success', 'Data admin berhasil diperbarui');
     }
 
     /**
@@ -121,6 +121,6 @@ class DashboardAdminController extends Controller
     public function destroy(Admin $admin)
     {
         Admin::destroy($admin->id);
-        return redirect('/admin/dashboard/admin')->with('success','Admin berhasil dihapus');
+        return redirect('/admin/manager')->with('success','Admin berhasil dihapus');
     }
 }

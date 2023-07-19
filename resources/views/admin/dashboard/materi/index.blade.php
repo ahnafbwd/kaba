@@ -27,7 +27,7 @@
         <div class="card-header py-3">
                 <div class="d-sm-flex align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-dark">Tabel Data Materi</h6>
-                    <a href="/admin/dashboard/materi/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                    <a href="/admin/materi/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                             class="fas fa-plus fa-sm text-white-100"></i> Tambah Materi</a>
                 </div>
         </div>
@@ -53,13 +53,13 @@
                                 <td>{{ $materi->deskripsi_singkat }}</td>
                                 <td>{{ Str::limit($materi->deskripsi, 40) }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/dashboard/materi/{{ $materi->kode_materi }}" class="btn btn-info btn-circle btn-sm">
+                                    <a href="/admin/materi/{{ $materi->kode_materi }}" class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/dashboard/materi/{{ $materi->kode_materi }}/edit" class="btn btn-warning btn-circle btn-sm">
+                                    <a href="/admin/materi/{{ $materi->kode_materi }}/edit" class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/dashboard/materi/{{ $materi->kode_materi }}" method="post" class="d-inline">
+                                    <form action="/admin/materi/{{ $materi->kode_materi }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $materi->kode_materi }}"><i class="fas fa-trash"></i></button>

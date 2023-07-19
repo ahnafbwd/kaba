@@ -7,7 +7,7 @@
             <nav class="">
                 <ol class="breadcrumb border border-gray bg-dark">
                     <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/dashboard/siswa" class="text-white">Siswa</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/siswa" class="text-white">Siswa</a></li>
                     <li class="breadcrumb-item active text-white">Create</li>
                 </ol>
             </nav>
@@ -33,7 +33,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <form method="post" action="/admin/dashboard/siswa">
+                                <form method="post" action="/admin/siswa">
                                     @csrf
                                     <div class="row">
                                         <!-- Kode User -->

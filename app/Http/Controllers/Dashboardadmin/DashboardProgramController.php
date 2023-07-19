@@ -79,7 +79,7 @@ class DashboardProgramController extends Controller
 
     $program->save();
 
-    return redirect('/admin/dashboard/program')->with('success', 'Program berhasil ditambahkan');
+    return redirect('/admin/program')->with('success', 'Program berhasil ditambahkan');
 }
 
 
@@ -152,7 +152,7 @@ class DashboardProgramController extends Controller
         // Update data pengguna
         $program->update($validatedData);
 
-        return redirect('/admin/dashboard/program')->with('success', 'Data Program berhasil diperbarui');
+        return redirect('/admin/program')->with('success', 'Data Program berhasil diperbarui');
     }
 
     /**
@@ -164,6 +164,6 @@ class DashboardProgramController extends Controller
     public function destroy(Program $program)
     {
         Program::destroy($program->id);
-        return redirect('/admin/dashboard/program')->with('success','Program berhasil dihapus');
+        return redirect('/admin/program')->with('success','Program berhasil dihapus');
     }
 }

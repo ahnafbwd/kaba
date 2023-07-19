@@ -7,19 +7,19 @@
         <nav class="">
             <ol class="breadcrumb border border-gray bg-dark">
                 <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-white">Home</a></li>
-                <li class="breadcrumb-item"><a href="/admin/dashboard/jadwal" class="text-white">Jadwal</a></li>
+                <li class="breadcrumb-item"><a href="/admin/jadwal" class="text-white">Jadwal</a></li>
                 <li class="breadcrumb-item active text-white">Profile</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
     <div class="mb-4">
         <div class="d-sm-flex align-items-center justify-content-between">
-            <a href="/admin/dashboard/jadwal" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+            <a href="/admin/jadwal" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                     class="fas fa-arrow-left fa-sm text-white-100"></i> Kembali</a>
-            <a href="/admin/dashboard/jadwal/{{ $jadwal->kode_jadwal }}/edit"
+            <a href="/admin/jadwal/{{ $jadwal->kode_jadwal }}/edit"
                 class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
                     class="fas fa-edit fa-sm text-white-100"></i> Edit Jadwal</a>
-            <form action="/admin/dashboard/jadwal/{{ $jadwal->kode_jadwal }}" method="post" class="d-inline">
+            <form action="/admin/jadwal/{{ $jadwal->kode_jadwal }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
                 <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"

@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <link rel="stylesheet" href="/userdashboard/vendors/feather/feather.css">
-    <link rel="stylesheet" href="/userdashboard/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="/userdashboard/vendors/css/vendor.bundle.base.css'">
     <!-- endinject -->
     <!-- Plugin css for this page -->
@@ -91,7 +90,8 @@
     <script src="/userdashboard/js/dashboard.js"></script>
     <script src="/userdashboard/js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

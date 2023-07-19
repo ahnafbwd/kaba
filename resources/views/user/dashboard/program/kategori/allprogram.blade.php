@@ -1,9 +1,4 @@
 @php
-    // $programs = \App\Models\Program::with('tingkat')->get();
-    // $tingkats = \App\Models\Tingkat::all();
-    // $programs = \App\Models\Program::with('tingkat')->whereHas('tingkat',function ($query) {
-    //     $query->whereColumn('kode_tingkat','programs.kode_tingkat');
-    // })
     $programs = \App\Models\Program::leftJoin('tingkats', 'tingkats.kode_tingkat', '=', 'programs.kode_tingkat')
         ->select('programs.*', 'tingkats.nama_tingkat')
         ->get();

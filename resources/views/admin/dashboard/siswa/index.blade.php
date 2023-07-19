@@ -27,7 +27,7 @@
         <div class="card-header py-3">
                 <div class="d-sm-flex align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-dark">Tabel Data Siswa</h6>
-                    <a href="/admin/dashboard/siswa/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                    <a href="/admin/siswa/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                             class="fas fa-plus fa-sm text-white-100"></i> Tambah Siswa</a>
                 </div>
         </div>
@@ -57,13 +57,13 @@
                                 <td>{{ $siswa->tanggal_masuk }}</td>
                                 <td>{{ $siswa->tanggal_lulus }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/dashboard/siswa/{{ $siswa->kode_siswa }}" class="btn btn-info btn-circle btn-sm">
+                                    <a href="/admin/siswa/{{ $siswa->kode_siswa }}" class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/dashboard/siswa/{{ $siswa->kode_siswa }}/edit" class="btn btn-warning btn-circle btn-sm">
+                                    <a href="/admin/siswa/{{ $siswa->kode_siswa }}/edit" class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/dashboard/siswa/{{ $siswa->kode_siswa }}" method="post" class="d-inline">
+                                    <form action="/admin/siswa/{{ $siswa->kode_siswa }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $siswa->kode_siswa }}"><i class="fas fa-trash"></i></button>

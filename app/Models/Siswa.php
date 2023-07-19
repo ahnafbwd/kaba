@@ -58,6 +58,14 @@ class Siswa extends Model
     {
         return $this->belongsTo(Kelompok::class, 'kode_kelas', 'kode_kelas');
     }
-    
+    public function pengumpulan()
+    {
+        return $this->hasMany(Pengumpulan::class, 'kode_siswa', 'kode_siswa');
+    }
+    public function presensi()
+    {
+        return $this->hasMany(Presensi::class, 'kode_siswa', 'kode_siswa');
+    }
+
 
 }

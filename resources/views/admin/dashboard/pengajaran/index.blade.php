@@ -27,7 +27,7 @@
         <div class="card-header py-3">
                 <div class="d-sm-flex align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-dark">Tabel Data Pengajaran</h6>
-                    <a href="/admin/dashboard/pengajaran/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                    <a href="/admin/kurikulum/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                             class="fas fa-plus fa-sm text-white-100"></i> Tambah Pengajaran</a>
                 </div>
         </div>
@@ -57,13 +57,13 @@
                                 <td>{{ $pengajaran->kode_waktu }}</td>
                                 <td>{{ $pengajaran->status_pengajaran }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/dashboard/pengajaran/{{ $pengajaran->kode_pengajaran }}" class="btn btn-info btn-circle btn-sm">
+                                    <a href="/admin/kurikulum/{{ $pengajaran->kode_pengajaran }}" class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/dashboard/pengajaran/{{ $pengajaran->kode_pengajaran }}/edit" class="btn btn-warning btn-circle btn-sm">
+                                    <a href="/admin/kurikulum/{{ $pengajaran->kode_pengajaran }}/edit" class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/dashboard/pengajaran/{{ $pengajaran->kode_pengajaran }}" method="post" class="d-inline">
+                                    <form action="/admin/kurikulum/{{ $pengajaran->kode_pengajaran }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajaran->kode_pengajaran }}"><i class="fas fa-trash"></i></button>

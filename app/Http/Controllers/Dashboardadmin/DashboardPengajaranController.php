@@ -63,12 +63,12 @@ class DashboardPengajaranController extends Controller
          ])->exists();
 
          if ($isExists) {
-             return redirect('/admin/dashboard/pengajaran')->with('error', 'Pengajaran yang sama sudah ada.');
+             return redirect('/admin/kurikulum')->with('error', 'Pengajaran yang sama sudah ada.');
          }
 
          Pengajaran::create($request->all());
 
-         return redirect('/admin/dashboard/pengajaran')->with('success', 'Pengajaran berhasil ditambahkan');
+         return redirect('/admin/kurikulum')->with('success', 'Pengajaran berhasil ditambahkan');
      }
 
 
@@ -134,7 +134,7 @@ class DashboardPengajaranController extends Controller
         // Update data pengguna
         $pengajaran->update($validatedData);
 
-        return redirect('/admin/dashboard/pengajaran')->with('success', 'Data Pengajaran berhasil diperbarui');
+        return redirect('/admin/kurikulum')->with('success', 'Data Pengajaran berhasil diperbarui');
     }
 
     /**
@@ -146,6 +146,6 @@ class DashboardPengajaranController extends Controller
     public function destroy(Pengajaran $pengajaran)
     {
         Pengajaran::destroy($pengajaran->id);
-        return redirect('/admin/dashboard/pengajaran')->with('success','Pengajaran berhasil dihapus');
+        return redirect('/admin/kurikulum')->with('success','Pengajaran berhasil dihapus');
     }
 }

@@ -53,7 +53,7 @@ class DashboardTingkatController extends Controller
             'ikon' => $request->ikon,
         ]);
 
-        return redirect('/admin/dashboard/tingkat')->with('success','Tingkat berhasil ditambahkan');
+        return redirect('/admin/tingkat')->with('success','Tingkat berhasil ditambahkan');
     }
 
     /**
@@ -107,7 +107,7 @@ class DashboardTingkatController extends Controller
         // Update data pengguna
         $tingkat->update($validatedData);
 
-        return redirect('/admin/dashboard/tingkat')->with('success', 'Tingkat berhasil diperbarui');
+        return redirect('/admin/tingkat')->with('success', 'Tingkat berhasil diperbarui');
     }
 
     /**
@@ -119,7 +119,7 @@ class DashboardTingkatController extends Controller
     public function destroy(Tingkat $tingkat)
     {
         Tingkat::destroy($tingkat->id);
-        return redirect('/admin/dashboard/tingkat')->with('success',"Tingkat berhasil dihapus");
+        return redirect('/admin/tingkat')->with('success',"Tingkat berhasil dihapus");
 
     }
 }

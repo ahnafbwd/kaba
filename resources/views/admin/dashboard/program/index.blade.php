@@ -27,7 +27,7 @@
         <div class="card-header py-3">
                 <div class="d-sm-flex align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-dark">Tabel Data Program</h6>
-                    <a href="/admin/dashboard/program/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                    <a href="/admin/program/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                             class="fas fa-plus fa-sm text-white-100"></i> Tambah Program</a>
                 </div>
         </div>
@@ -55,13 +55,13 @@
                                 <td>{{ $program->harga }}</td>
                                 <td>{{ $program->kuota_siswa }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/dashboard/program/{{ $program->kode_program }}" class="btn btn-info btn-circle btn-sm">
+                                    <a href="/admin/program/{{ $program->kode_program }}" class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/dashboard/program/{{ $program->kode_program }}/edit" class="btn btn-warning btn-circle btn-sm">
+                                    <a href="/admin/program/{{ $program->kode_program }}/edit" class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/dashboard/program/{{ $program->kode_program }}" method="post" class="d-inline">
+                                    <form action="/admin/program/{{ $program->kode_program }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $program->kode_program }}"><i class="fas fa-trash"></i></button>

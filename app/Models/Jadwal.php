@@ -35,12 +35,16 @@ class Jadwal extends Model
     return $this->belongsTo(Pengajaran::class, 'kode_pengajaran', 'kode_pengajaran');
 }
 
-
+public function absensi()
+{
+    return $this->belongsTo(Absensi::class, 'kode_jadwal', 'kode_jadwal');
+}
 
 public function kelompok()
 {
     return $this->belongsTo(Kelompok::class, 'kode_kelas', 'kode_kelas');
 }
+
 
     public function program()
     {

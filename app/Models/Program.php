@@ -55,7 +55,11 @@ class Program extends Model
      {
          return $this->hasMany(Materi::class, 'kode_materi', 'kode_materi');
      }
-
+     public function pengumpulans()
+     {
+         return $this->hasMany(Pengumpulan::class, 'kode_tugas', 'kode_tugas');
+     }
+     
      protected static function boot()
     {
         parent::boot();

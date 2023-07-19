@@ -27,7 +27,7 @@
         <div class="card-header py-3">
                 <div class="d-sm-flex align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-dark">Tabel Data Pendaftaran</h6>
-                    <a href="/admin/dashboard/pendaftaran/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                    <a href="/admin/pendaftaran/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                             class="fas fa-plus fa-sm text-white-100"></i> Tambah Pendaftaran</a>
                 </div>
         </div>
@@ -61,13 +61,13 @@
                                 <td>{{ $pendaftaran->tanggal_pendaftaran }}</td>
                                 <td>{{ $pendaftaran->tanggal_pembayaran }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/dashboard/pendaftaran/{{ $pendaftaran->kode_pendaftaran }}" class="btn btn-info btn-circle btn-sm">
+                                    <a href="/admin/pendaftaran/{{ $pendaftaran->kode_pendaftaran }}" class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/dashboard/pendaftaran/{{ $pendaftaran->kode_pendaftaran }}/edit" class="btn btn-warning btn-circle btn-sm">
+                                    <a href="/admin/pendaftaran/{{ $pendaftaran->kode_pendaftaran }}/edit" class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/dashboard/pendaftaran/{{ $pendaftaran->kode_pendaftaran }}" method="post" class="d-inline">
+                                    <form action="/admin/pendaftaran/{{ $pendaftaran->kode_pendaftaran }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pendaftaran->kode_pendaftaran }}"><i class="fas fa-trash"></i></button>

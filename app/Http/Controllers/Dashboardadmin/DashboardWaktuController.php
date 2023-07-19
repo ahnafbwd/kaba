@@ -60,7 +60,7 @@ class DashboardWaktuController extends Controller
         'waktu_berakhir' => $waktuBerakhirFormatted,
     ]);
 
-    return redirect('/admin/dashboard/waktu')->with('success', 'Waktu berhasil ditambahkan');
+    return redirect('/admin/waktu')->with('success', 'Waktu berhasil ditambahkan');
 }
 
 
@@ -117,7 +117,7 @@ class DashboardWaktuController extends Controller
     $waktu->waktu_berakhir = $waktuBerakhirFormatted;
     $waktu->save();
 
-    return redirect('/admin/dashboard/waktu')->with('success', 'Waktu berhasil diperbarui');
+    return redirect('/admin/waktu')->with('success', 'Waktu berhasil diperbarui');
 }
 
 
@@ -130,6 +130,6 @@ class DashboardWaktuController extends Controller
     public function destroy(Waktu $waktu)
     {
         Waktu::destroy($waktu->id);
-        return redirect('/admin/dashboard/waktu')->with('success','Waktu berhasil dihapus');
+        return redirect('/admin/waktu')->with('success','Waktu berhasil dihapus');
     }
 }

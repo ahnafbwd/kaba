@@ -61,7 +61,7 @@ class DashboardPengajarController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('/admin/dashboard/pengajar')->with('success','Pengajar berhasil ditambahkan');
+        return redirect('/admin/pengajar')->with('success','Pengajar berhasil ditambahkan');
     }
 
     /**
@@ -119,7 +119,7 @@ class DashboardPengajarController extends Controller
         // Update data pengguna
         $pengajar->update($validatedData);
 
-        return redirect('/admin/dashboard/pengajar')->with('success', 'Data pengguna berhasil diperbarui');
+        return redirect('/admin/pengajar')->with('success', 'Data pengguna berhasil diperbarui');
     }
 
     /**
@@ -131,6 +131,6 @@ class DashboardPengajarController extends Controller
     public function destroy(Pengajar $pengajar)
     {
         Pengajar::destroy($pengajar->id);
-        return redirect('/admin/dashboard/pengajar')->with('success','Pengajar berhasil dihapus');
+        return redirect('/admin/pengajar')->with('success','Pengajar berhasil dihapus');
     }
 }

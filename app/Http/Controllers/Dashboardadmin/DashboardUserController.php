@@ -61,7 +61,7 @@ class DashboardUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('/admin/dashboard/user')->with('success','User berhasil ditambahkan');
+        return redirect('/admin/user')->with('success','User berhasil ditambahkan');
     }
 
     /**
@@ -118,7 +118,7 @@ class DashboardUserController extends Controller
         // Update data pengguna
         $user->update($validatedData);
 
-        return redirect('/admin/dashboard/user')->with('success', 'Data pengguna berhasil diperbarui');
+        return redirect('/admin/user')->with('success', 'Data pengguna berhasil diperbarui');
     }
 
     /**
@@ -130,6 +130,6 @@ class DashboardUserController extends Controller
     public function destroy(User $user)
     {
         User::destroy($user->id);
-        return redirect('/admin/dashboard/user')->with('success','User berhasil dihapus');
+        return redirect('/admin/user')->with('success','User berhasil dihapus');
     }
 }

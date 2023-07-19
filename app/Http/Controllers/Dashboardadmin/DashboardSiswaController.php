@@ -49,7 +49,7 @@ class DashboardSiswaController extends Controller
     // Simpan data siswa baru
     $siswa = Siswa::create($validatedData);
 
-    return redirect('/admin/dashboard/siswa')->with('success', 'Data Siswa berhasil disimpan');
+    return redirect('/admin/siswa')->with('success', 'Data Siswa berhasil disimpan');
 }
 
 
@@ -96,7 +96,7 @@ class DashboardSiswaController extends Controller
         // Update data pengguna
         $siswa->update($validatedData);
 
-        return redirect('/admin/dashboard/siswa')->with('success', 'Data Siswa berhasil diperbarui');
+        return redirect('/admin/siswa')->with('success', 'Data Siswa berhasil diperbarui');
     }
 
     /**
@@ -108,6 +108,6 @@ class DashboardSiswaController extends Controller
     public function destroy(Siswa $siswa)
     {
         Siswa::destroy($siswa->id);
-        return redirect('/admin/dashboard/siswa')->with('success','Siswa berhasil dihapus');
+        return redirect('/admin/siswa')->with('success','Siswa berhasil dihapus');
     }
 }

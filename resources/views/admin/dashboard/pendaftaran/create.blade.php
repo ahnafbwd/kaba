@@ -7,7 +7,7 @@
             <nav class="">
                 <ol class="breadcrumb border border-gray bg-dark">
                     <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/dashboard/pendaftaran" class="text-white">Pendaftaran</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/pendaftaran" class="text-white">Pendaftaran</a></li>
                     <li class="breadcrumb-item active text-white">Create</li>
                 </ol>
             </nav>
@@ -34,7 +34,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <form method="post" action="/admin/dashboard/pendaftaran/">
+                                <form method="post" action="/admin/pendaftaran/">
                                     @csrf
                                     <div class="row">
                                         <!-- Kode Materi -->

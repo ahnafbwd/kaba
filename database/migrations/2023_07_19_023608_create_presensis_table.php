@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fasls', function (Blueprint $table) {
+        Schema::create('presensis', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_kelas');
-            $table->string('kode_program');
-            $table->string('kode_angkatan');
-            $table->string('nama_kelas');
-            $table->text('deskripsi')->nullable();
-            $table->integer('jumlah_siswa')->nullable();
-            $table->string('status_kelas');
+            $table->string('kode_presensi');
+            $table->string('kode_absensi');
+            $table->string('kode_siswa');
+            $table->string('status_kehadiran');
+            $table->time('waktu_presensi')->default(now());
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fasls');
+        Schema::dropIfExists('presensis');
     }
 };

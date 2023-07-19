@@ -7,19 +7,19 @@
             <nav class="">
                 <ol class="breadcrumb border border-gray bg-dark">
                     <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/dashboard/siswa" class="text-white">Siswa</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/siswa" class="text-white">Siswa</a></li>
                     <li class="breadcrumb-item active text-white">Profile</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
         <div class="mb-4">
             <div class="d-sm-flex align-items-center justify-content-between">
-                <a href="/admin/dashboard/siswa" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                <a href="/admin/siswa" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                         class="fas fa-arrow-left fa-sm text-white-100"></i> Kembali</a>
-                <a href="/admin/dashboard/siswa/{{ $siswa->kode_siswa }}/edit"
+                <a href="/admin/siswa/{{ $siswa->kode_siswa }}/edit"
                     class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
                         class="fas fa-edit fa-sm text-white-100"></i> Edit Siswa</a>
-                <form action="/admin/dashboard/siswa/{{ $siswa->kode_siswa }}" method="post" class="d-inline">
+                <form action="/admin/siswa/{{ $siswa->kode_siswa }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf
                     <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"

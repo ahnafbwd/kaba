@@ -108,7 +108,7 @@ class ProgramController extends Controller
     public function destroy(Program $program)
     {
         Program::destroy($program->id);
-        return redirect('/admin/dashboard/program')->with('success','Program berhasil dihapus');
+        return redirect('/admin/program')->with('success','Program berhasil dihapus');
     }
 
 //     public function konfirmasiPendaftaran(Program $program)

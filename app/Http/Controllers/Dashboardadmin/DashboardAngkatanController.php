@@ -53,7 +53,7 @@ class DashboardAngkatanController extends Controller
             'tanggal_lulus' => $request->tanggal_lulus,
         ]);
 
-        return redirect('/admin/dashboard/angkatan')->with('success','Angkatan berhasil ditambahkan');
+        return redirect('/admin/angkatan')->with('success','Angkatan berhasil ditambahkan');
     }
 
     /**
@@ -107,7 +107,7 @@ class DashboardAngkatanController extends Controller
         // Update data pengguna
         $angkatan->update($validatedData);
 
-        return redirect('/admin/dashboard/angkatan')->with('success', 'Angkatan berhasil diperbarui');
+        return redirect('/admin/angkatan')->with('success', 'Angkatan berhasil diperbarui');
     }
 
     /**
@@ -119,6 +119,6 @@ class DashboardAngkatanController extends Controller
     public function destroy(Angkatan $angkatan)
     {
         Angkatan::destroy($angkatan->id);
-        return redirect('/admin/dashboard/angkatan')->with('success','Angkatan berhasil dihapus');
+        return redirect('/admin/angkatan')->with('success','Angkatan berhasil dihapus');
     }
 }

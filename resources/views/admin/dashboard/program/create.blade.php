@@ -7,7 +7,7 @@
             <nav class="">
                 <ol class="breadcrumb border border-gray bg-dark">
                     <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/dashboard/program" class="text-white">Program</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/program" class="text-white">Program</a></li>
                     <li class="breadcrumb-item active text-white">Create</li>
                 </ol>
             </nav>
@@ -32,7 +32,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <form method="post" action="/admin/dashboard/program/">
+                                <form method="post" action="/admin/program/">
                                     @csrf
                                     <div class="row">
                                         <!-- Nama Program -->

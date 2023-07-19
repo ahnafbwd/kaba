@@ -55,4 +55,8 @@ class Tugas extends Model
      {
          return $this->belongsTo(Materi::class, 'kode_materi', 'kode_materi');
      }
+     public function pengumpulan()
+    {
+        return $this->hasMany(Pengumpulan::class, 'kode_tugas', 'kode_tugas');
+    }
 }

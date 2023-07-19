@@ -28,7 +28,7 @@
         <div class="card-header py-3">
             <div class="d-sm-flex align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-dark">Tabel Data User</h6>
-                <a href="/admin/dashboard/user/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                <a href="/admin/user/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                         class="fas fa-plus fa-sm text-white-100"></i> Tambah User</a>
             </div>
         </div>
@@ -54,15 +54,15 @@
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->nomer_telepon }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/dashboard/user/{{ $user->kode_user }}"
+                                    <a href="/admin/user/{{ $user->kode_user }}"
                                         class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/dashboard/user/{{ $user->kode_user }}/edit"
+                                    <a href="/admin/user/{{ $user->kode_user }}/edit"
                                         class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/dashboard/user/{{ $user->kode_user }}" method="post"
+                                    <form action="/admin/user/{{ $user->kode_user }}" method="post"
                                         class="d-inline">
                                         @method('delete')
                                         @csrf

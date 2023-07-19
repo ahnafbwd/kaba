@@ -64,7 +64,7 @@
                                 <form action="/pengajar/tugas/{{ $tugas->kode_tugas }}" method="post" class="d-inline">
                                     @method('delete')
                                     @csrf
-                                    <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $tugas->kode_tugas }}"><i class="fas fa-trash"></i></button>
+                                    <button type="button" class="btn btn-danger bg-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $tugas->kode_tugas }}"><i class="fas fa-trash"></i></button>
                                     <div class="modal fade" id="basicModal{{ $tugas->kode_tugas }}" tabindex="-1">
                                         <div class="modal-dialog">
                                           <div class="modal-content">
@@ -76,8 +76,8 @@
                                                 Kamu yakin menghapus tugas ini?
                                             </div>
                                             <div class="modal-footer align-items-center justify-content-center">
-                                              <button type="button" class="btn btn-dark border-1" data-bs-dismiss="modal">Kembali</button>
-                                              <button type="submit" class="btn btn-danger">Hapus</button>
+                                              <button type="button" class="btn btn-dark bg-dark border-1" data-bs-dismiss="modal">Kembali</button>
+                                              <button type="submit" class="btn btn-danger bg-danger">Hapus</button>
                                             </div>
                                           </div>
                                         </div>

@@ -60,7 +60,7 @@ class DashboardMateriController extends Controller
             'deskripsi' => $request->deskripsi,
             'modul' => $filePath, // Simpan path file dalam database
         ]);
-        return redirect('/admin/dashboard/materi')->with('success','Materi berhasil ditambahkan');
+        return redirect('/admin/materi')->with('success','Materi berhasil ditambahkan');
     }
 
     /**
@@ -118,7 +118,7 @@ class DashboardMateriController extends Controller
 
         $materi->save();
 
-        return redirect('/admin/dashboard/materi')->with('success', 'Materi berhasil diperbarui');
+        return redirect('/admin/materi')->with('success', 'Materi berhasil diperbarui');
     }
 
     /**
@@ -130,7 +130,7 @@ class DashboardMateriController extends Controller
     public function destroy(Materi $materi)
     {
         Materi::destroy($materi->id);
-        return redirect('/admin/dashboard/materi')->with('success','Materi berhasil dihapus');
+        return redirect('/admin/materi')->with('success','Materi berhasil dihapus');
     }
 
     public function download($kode_materi)
@@ -141,7 +141,7 @@ class DashboardMateriController extends Controller
         return response()->download(storage_path('app/' . $materi->modul));
     }
 
-    return redirect('/admin/dashboard/materi')->with('error', 'Materi tidak ditemukan');
+    return redirect('/admin/materi')->with('error', 'Materi tidak ditemukan');
 }
 
 

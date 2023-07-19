@@ -7,7 +7,7 @@
             <nav class="">
                 <ol class="breadcrumb border border-gray bg-dark">
                     <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/admin/dashboard/jadwal" class="text-white">Jadwal</a></li>
+                    <li class="breadcrumb-item"><a href="/admin/jadwal" class="text-white">Jadwal</a></li>
                     <li class="breadcrumb-item active text-white">Edit</li>
                 </ol>
             </nav>
@@ -32,7 +32,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <form method="post" action="/admin/dashboard/jadwal/{{ $jadwal->kode_jadwal }}">
+                                <form method="post" action="/admin/jadwal/{{ $jadwal->kode_jadwal }}">
                                     @method('patch')
                                     @csrf
                                     <div class="row">

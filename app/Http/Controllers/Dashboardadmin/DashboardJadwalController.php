@@ -61,12 +61,12 @@ class DashboardJadwalController extends Controller
 
 
         if ($isExists) {
-            return redirect('/admin/dashboard/jadwal')->with('error', 'Jadwal yang sama sudah ada.');
+            return redirect('/admin/jadwal')->with('error', 'Jadwal yang sama sudah ada.');
         }
 
         Jadwal::create($request->all());
 
-        return redirect('/admin/dashboard/jadwal')->with('success','Jadwal berhasil ditambahkan');
+        return redirect('/admin/jadwal')->with('success','Jadwal berhasil ditambahkan');
     }
 
     /**
@@ -115,7 +115,7 @@ class DashboardJadwalController extends Controller
 
         if ($request->kode_pengajaran != $jadwal->kode_pengajaran && $request->kode_pengajaran != $jadwal->kode_pengajaran) {
             $rules;
-            // return redirect('/admin/dashboard/jadwal')->with('error', 'Pengajaran yang sama sudah ada.');
+            // return redirect('/admin/jadwal')->with('error', 'Pengajaran yang sama sudah ada.');
         }
 
         $validatedData = $request->validate($rules);
@@ -123,7 +123,7 @@ class DashboardJadwalController extends Controller
         // Update data pengguna
         $jadwal->update($validatedData);
 
-        return redirect('/admin/dashboard/jadwal')->with('success', 'Kelas berhasil diperbarui');
+        return redirect('/admin/jadwal')->with('success', 'Kelas berhasil diperbarui');
     }
 
     /**
@@ -135,7 +135,7 @@ class DashboardJadwalController extends Controller
     public function destroy(Jadwal $jadwal)
     {
         Jadwal::destroy($jadwal->id);
-        return redirect('/admin/dashboard/jadwal')->with('success','Pengajaran berhasil dihapus');
+        return redirect('/admin/jadwal')->with('success','Pengajaran berhasil dihapus');
     }
 
 

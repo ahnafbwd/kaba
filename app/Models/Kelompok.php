@@ -48,9 +48,10 @@ class Kelompok extends Model
     }
 
     public function jadwal()
-    {
-        return $this->hasMany(Jadwal::class, 'kode_kelas', 'kode_kelas');
-    }
+{
+    return $this->hasMany(Jadwal::class, 'kode_kelas', 'kode_kelas');
+}
+
 
     public function program()
 {
@@ -64,5 +65,9 @@ class Kelompok extends Model
     public function siswa()
     {
         return $this->hasMany(Siswa::class, 'kode_kelas', 'kode_kelas');
+    }
+    public function tugas()
+    {
+        return $this->hasMany(Tugas::class, 'kode_kelas', 'kode_kelas');
     }
 }

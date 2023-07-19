@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Dashboardpengajar;
 
 use App\Http\Controllers\Controller;
+use App\Models\Jadwal;
 use App\Models\Materi;
+use App\Models\Pengajaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PengajarMateriController extends Controller
 {
@@ -15,7 +18,10 @@ class PengajarMateriController extends Controller
      */
     public function index()
     {
-        //
+        $kodepengajar = Auth::guard('pengajar')->user()->kode_pengajar;
+        $pengajaran = Pengajaran::where('kode_pengajar', $kodepengajar)->get();
+        $materis = $pengajaran->pluck('materi')->unique(); // Menampilkan hanya satu entri per nama kelas
+        return view('pengajar.dashboard.materi.index',compact('materis'));
     }
 
     /**
@@ -47,7 +53,9 @@ class PengajarMateriController extends Controller
      */
     public function show(Materi $materi)
     {
-        //
+        return view('pengajar.dashboard.materi.show',[
+            'materi' => $materi
+        ]);
     }
 
     /**

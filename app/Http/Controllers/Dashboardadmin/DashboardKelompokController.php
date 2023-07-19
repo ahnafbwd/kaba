@@ -66,7 +66,7 @@ class DashboardKelompokController extends Controller
             'jumlah_siswa' => $request->jumlah_siswa,
         ]);
 
-        return redirect('/admin/dashboard/kelompok')->with('success','Kelas berhasil ditambahkan');
+        return redirect('/admin/kelompok')->with('success','Kelas berhasil ditambahkan');
     }
 
     /**
@@ -133,7 +133,7 @@ class DashboardKelompokController extends Controller
         // Update data pengguna
         $kelompok->update($validatedData);
 
-        return redirect('/admin/dashboard/kelompok')->with('success', 'Kelas berhasil diperbarui');
+        return redirect('/admin/kelompok')->with('success', 'Kelas berhasil diperbarui');
     }
 
     /**
@@ -145,6 +145,6 @@ class DashboardKelompokController extends Controller
     public function destroy(Kelompok $kelompok)
     {
         Kelompok::destroy($kelompok->id);
-        return redirect('/admin/dashboard/kelompok')->with('success','Kelas berhasil dihapus');
+        return redirect('/admin/kelompok')->with('success','Kelas berhasil dihapus');
     }
 }

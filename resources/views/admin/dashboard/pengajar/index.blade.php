@@ -27,7 +27,7 @@
         <div class="card-header py-3">
                 <div class="d-sm-flex align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-dark">Tabel Data Pengajar</h6>
-                    <a href="/admin/dashboard/pengajar/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
+                    <a href="/admin/pengajar/create" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                             class="fas fa-plus fa-sm text-white-100"></i> Tambah Pengajar</a>
                 </div>
         </div>
@@ -55,13 +55,13 @@
                                 <td>{{ $pengajar->nomer_telepon }}</td>
                                 <td>{{ $pengajar->status_kerja }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/dashboard/pengajar/{{ $pengajar->kode_pengajar }}" class="btn btn-info btn-circle btn-sm">
+                                    <a href="/admin/pengajar/{{ $pengajar->kode_pengajar }}" class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/dashboard/pengajar/{{ $pengajar->kode_pengajar }}/edit" class="btn btn-warning btn-circle btn-sm">
+                                    <a href="/admin/pengajar/{{ $pengajar->kode_pengajar }}/edit" class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/dashboard/pengajar/{{ $pengajar->kode_pengajar }}" method="post" class="d-inline">
+                                    <form action="/admin/pengajar/{{ $pengajar->kode_pengajar }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajar->kode_pengajar }}"><i class="fas fa-trash"></i></button>

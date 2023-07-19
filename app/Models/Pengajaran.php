@@ -45,9 +45,10 @@ class Pengajaran extends Model
     }
 
     public function jadwal()
-{
-    return $this->hasMany(Jadwal::class, 'kode_pengajaran', 'kode_pengajaran');
-}
+    {
+        return $this->hasMany(Jadwal::class, 'kode_pengajaran', 'kode_pengajaran');
+    }
+
 
     public function pengajar()
 {
