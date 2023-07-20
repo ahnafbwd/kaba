@@ -64,7 +64,7 @@
                                     <form action="/admin/pengajar/{{ $pengajar->kode_pengajar }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajar->kode_pengajar }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajar->kode_pengajar }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $pengajar->kode_pengajar }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

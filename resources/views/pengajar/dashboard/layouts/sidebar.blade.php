@@ -24,11 +24,11 @@
           </ul>
         </div>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="/pengajar/profile">
           <i class="icon-head menu-icon"></i>
           <span class="menu-title">Profile</span>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>

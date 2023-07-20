@@ -62,7 +62,7 @@
                                     <form action="/admin/materi/{{ $materi->kode_materi }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $materi->kode_materi }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $materi->kode_materi }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $materi->kode_materi }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

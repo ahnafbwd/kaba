@@ -64,7 +64,7 @@
                                     <form action="/admin/jadwal/{{ $jadwal->kode_jadwal }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $jadwal->kode_jadwal }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $jadwal->kode_jadwal }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $jadwal->kode_jadwal }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

@@ -16,10 +16,10 @@
             <div class="d-sm-flex align-items-center justify-content-between">
                 <a href="/admin/program" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i
                         class="fas fa-arrow-left fa-sm text-white-100"></i> Kembali</a>
-                <form action="/admin/program/{{ $program->kode_program }}" method="post" class="d-inline">
+                <form action="{{ route('admin.program.destroy', $program->kode_program) }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf
-                    <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"
+                    <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm bg-danger"
                         data-bs-toggle="modal" data-bs-target="#basicModal{{ $program->kode_program }}"><i
                             class="fas fa-trash fa-sm text-white-100 pr-2"></i>Hapus Pengajarana</button>
                     <div class="modal fade" id="basicModal{{ $program->kode_program }}" tabindex="-1">
@@ -64,7 +64,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <form method="post" action="/admin/program/{{ $program->kode_program }}">
+                                <form method="post" action="{{ route('admin.program.update', $program->kode_program) }}">
                                     @csrf
                                     @method('patch')
 

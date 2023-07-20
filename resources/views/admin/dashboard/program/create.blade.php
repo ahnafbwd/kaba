@@ -32,7 +32,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <form method="post" action="/admin/program/">
+                                <form method="post" action="{{ route('admin.program.store') }}">
                                     @csrf
                                     <div class="row">
                                         <!-- Nama Program -->

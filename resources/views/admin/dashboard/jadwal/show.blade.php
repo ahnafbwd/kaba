@@ -22,7 +22,7 @@
             <form action="/admin/jadwal/{{ $jadwal->kode_jadwal }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
-                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"
+                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm bg-danger"
                     data-bs-toggle="modal" data-bs-target="#basicModal{{ $jadwal->kode_jadwal }}"><i
                         class="fas fa-trash fa-sm text-white-100 pr-2"></i>Hapus Jadwal</button>
                 <div class="modal fade" id="basicModal{{ $jadwal->kode_jadwal }}" tabindex="-1">

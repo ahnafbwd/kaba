@@ -66,7 +66,7 @@
                                     <form action="/admin/kurikulum/{{ $pengajaran->kode_pengajaran }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajaran->kode_pengajaran }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajaran->kode_pengajaran }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $pengajaran->kode_pengajaran }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

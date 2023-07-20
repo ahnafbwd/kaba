@@ -70,7 +70,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/user/materi/{kode_materi}/download', [MateriController::class, 'download'])->name('modul.download');
     Route::resource('/user/program', ProgramController::class);
     Route::resource('/user/pendaftaran', PendaftaranController::class);
-    Route::put('/user/pendaftaran/{pendaftaran}/update-kelompok', 'PendaftaranController@updateKelompok')->name('pendaftaran.updateKelompok');
+    Route::put('/user/pendaftaran/{pendaftaran}/update-kelompok', [PendaftaranController::class,'updateKelompok'])->name('pendaftaran.updateKelompok');
     // Route::post('/user/pendaftaran/midtrans-callback', [PendaftaranController::class,'callback']);
     Route::get('/user/program/{program}/konfirmasi-pendaftaran', [ProgramController::class, 'konfirmasiPendaftaran'])->name('program.konfirmasi');
     Route::get('/user/program/konfirmasi-pendaftaran/{kode_kelas}', [ProgramController::class, 'getKelasByKode']);
@@ -94,20 +94,20 @@ Route::get('/admin/dashboard', function () {
 })->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
 
 Route::middleware('auth:admin')->group(function () {
-    Route::resource('/admin/user', DashboardUserController::class);
-    Route::resource('/admin/pengajar', DashboardPengajarController::class);
+    Route::resource('/admin/user', DashboardUserController::class)->names('admin.user');
+    Route::resource('/admin/pengajar', DashboardPengajarController::class)->names('admin.pengajar');
     Route::resource('/admin/manager', DashboardAdminController::class);
-    Route::resource('/admin/angkatan', DashboardAngkatanController::class);
-    Route::resource('/admin/tingkat', DashboardTingkatController::class);
-    Route::resource('/admin/kelompok', DashboardKelompokController::class);
-    Route::resource('/admin/program', DashboardProgramController::class);
-    Route::resource('/admin/materi', DashboardMateriController::class);
+    Route::resource('/admin/angkatan', DashboardAngkatanController::class)->names('admin.angkatan');
+    Route::resource('/admin/tingkat', DashboardTingkatController::class)->names('admin.tingkat');
+    Route::resource('/admin/kelompok', DashboardKelompokController::class)->names('admin.kelompok');
+    Route::resource('/admin/program', DashboardProgramController::class)->names('admin.program');
+    Route::resource('/admin/materi', DashboardMateriController::class)->names('admin.materi');
     Route::get('/admin/materi/{kode_materi}/download', [DashboardMateriController::class, 'download'])->name('materi.download');
-    Route::resource('/admin/waktu', DashboardWaktuController::class);
-    Route::resource('/admin/kurikulum', DashboardPengajaranController::class);
-    Route::resource('/admin/pendaftaran', DashboardPendaftaranController::class);
-    Route::resource('/admin/jadwal', DashboardJadwalController::class);
-    Route::resource('/admin/siswa', DashboardSiswaController::class);
+    Route::resource('/admin/waktu', DashboardWaktuController::class)->names('admin.waktu');
+    Route::resource('/admin/kurikulum', DashboardPengajaranController::class)->names('admin.pengajaran');
+    Route::resource('/admin/pendaftaran', DashboardPendaftaranController::class)->names('admin.pendaftaran');
+    Route::resource('/admin/jadwal', DashboardJadwalController::class)->names('admin.jadwal');
+    Route::resource('/admin/siswa', DashboardSiswaController::class)->names('admin.siswa');
     Route::get('/admin/profile', [ProfileController::class, 'editadmin'])->name('admin.profile.edit');
     Route::patch('/admin/profile', [ProfileController::class, 'updateadmin'])->name('admin.profile.update');
     Route::delete('/admin/profile', [ProfileController::class, 'destroyadmin'])->name('admin.profile.destroy');
@@ -122,11 +122,11 @@ Route::get('/pengajar/dashboard', function () {
 })->middleware(['auth:pengajar', 'verified'])->name('pengajar.dashboard');
 
 Route::middleware('auth:pengajar')->group(function () {
-    Route::resource('/pengajar/jadwal', PengajarJadwalController::class);
-    Route::resource('/pengajar/absensi', PengajarAbsensiController::class);
-    Route::resource('/pengajar/tugas', PengajarTugasController::class);
-    Route::resource('/pengajar/materi', PengajarMateriController::class);
-    Route::resource('/pengajar/kelas', PengajarKelasController::class);
+    Route::resource('/pengajar/jadwal', PengajarJadwalController::class)->names('pengajar.jadwal');
+    Route::resource('/pengajar/absensi', PengajarAbsensiController::class)->names('pengajar.absensi');
+    Route::resource('/pengajar/tugas', PengajarTugasController::class)->names('pengajar.tugas');
+    Route::resource('/pengajar/materi', PengajarMateriController::class)->names('pengajar.materi');
+    Route::resource('/pengajar/kelas', PengajarKelasController::class)->names('pengajar.kelompok');
     Route::patch('/pengajar/tugas/{kodetugas}/pengumpulan/{kodepengumpulan}/nilai', [PengajarPengumpulanController::class, 'update'])->name('pengajartugasnilai.nilai');
     Route::delete('/pengajar/tugas/{kodetugas}/pengumpulan/{kodepengumpulan}/delete', [PengajarPengumpulanController::class, 'destroy'])->name('pengajarpengumpulanhapus.hapus');
     Route::get('/pengajar/tugas/{kode_tugas}/download', [PengajarTugasController::class, 'download'])->name('pengajartugasdownload.download');

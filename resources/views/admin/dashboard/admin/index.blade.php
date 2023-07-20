@@ -62,7 +62,7 @@
                                     <form action="/admin/manager/{{ $admin->kode_admin }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $admin->kode_admin }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $admin->kode_admin }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $admin->kode_admin }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

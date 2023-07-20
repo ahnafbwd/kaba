@@ -66,7 +66,7 @@
                                     <form action="/admin/siswa/{{ $siswa->kode_siswa }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $siswa->kode_siswa }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $siswa->kode_siswa }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $siswa->kode_siswa }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

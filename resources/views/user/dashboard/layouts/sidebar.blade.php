@@ -29,11 +29,11 @@
           <span class="menu-title">Transaksi</span>
         </a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="/user/profile">
           <i class="icon-head menu-icon"></i>
           <span class="menu-title">Profile</span>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>

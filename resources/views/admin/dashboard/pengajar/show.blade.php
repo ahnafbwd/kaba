@@ -22,7 +22,7 @@
             <form action="/admin/pengajar/{{ $pengajar->kode_pengajar }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
-                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"
+                <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm bg-danger"
                     data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajar->kode_pengajar }}"><i
                         class="fas fa-trash fa-sm text-white-100 pr-2"></i>Hapus Pengajar</button>
                 <div class="modal fade" id="basicModal{{ $pengajar->kode_pengajar }}" tabindex="-1">

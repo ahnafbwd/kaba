@@ -19,7 +19,7 @@
                 <form action="/admin/kurikulum/{{ $pengajaran->kode_pengajaran }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf
-                    <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"
+                    <button type="button" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm bg-danger"
                         data-bs-toggle="modal" data-bs-target="#basicModal{{ $pengajaran->kode_pengajaran }}"><i
                             class="fas fa-trash fa-sm text-white-100 pr-2"></i>Hapus Pengajarana</button>
                     <div class="modal fade" id="basicModal{{ $pengajaran->kode_pengajaran }}" tabindex="-1">

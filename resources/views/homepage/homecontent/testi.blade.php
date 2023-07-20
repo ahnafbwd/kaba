@@ -14,10 +14,10 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testimonials-1.jpg')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
-                    <h3>Saul Goodman</h3>
-                    <h4>Ceo &amp; Founder</h4>
+                    <h3>Muhammad Farhan</h3>
+                    <h4>Pelajar</h4>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                     </div>
@@ -25,7 +25,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Belajar bahasa Arab di Kaba adalah pengalaman yang mengesankan. Pengajarannya sangat interaktif, dan saya merasa semakin percaya diri dalam berbicara dan menulis dalam bahasa Arab. Kaba benar-benar membantu saya meraih keahlian bahasa yang saya cari.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -36,10 +36,10 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testimonials-2.jpg')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
+                    <h3>Ali Rizki</h3>
+                    <h4>Pelajar</h4>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                     </div>
@@ -47,7 +47,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Saya ingin berterima kasih kepada Kaba atas kursus bahasa Arab yang luar biasa. Materi pembelajarannya disusun dengan baik, dan para instruktur sangat berpengalaman. Kini, saya merasa lebih dekat dengan bahasa Arab dan budayanya.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -58,10 +58,10 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testimonials-3.jpg')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
-                    <h3>Jena Karlis</h3>
-                    <h4>Store Owner</h4>
+                    <h3>Ahmad Malik</h3>
+                    <h4>Pelajar</h4>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                     </div>
@@ -69,7 +69,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Saya merekomendasikan Kaba kepada siapa pun yang ingin belajar bahasa Arab dengan cepat dan efektif. Kursus mereka mengajarkan tata bahasa dan kosakata secara sistematis, sehingga memudahkan proses pembelajaran. Terima kasih Kaba!
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -80,10 +80,10 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testimonials-4.jpg')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
-                    <h3>Matt Brandon</h3>
-                    <h4>Freelancer</h4>
+                    <h3>Yusuf Abdullah</h3>
+                    <h4>Pelajar</h4>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                     </div>
@@ -91,7 +91,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore.
+                  Pengalaman belajar bahasa Arab di Kaba sangat menyenangkan. Instruktur yang ramah dan dukungan yang diberikan membuat proses belajar menjadi lebih mudah. Kini, saya dapat berbicara dalam bahasa Arab dengan lebih lancar.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -102,10 +102,10 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testimonials-5.jpg')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
-                    <h3>John Larson</h3>
-                    <h4>Entrepreneur</h4>
+                    <h3>Omar Said</h3>
+                    <h4>Pelajar</h4>
                     <div class="stars">
                       <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                     </div>
@@ -113,7 +113,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore.
+                  Kaba benar-benar memberikan kursus bahasa Arab yang berkualitas tinggi. Mereka fokus pada aspek berbicara dan mendengarkan, yang sangat membantu meningkatkan kemampuan bahasa Arab saya. Saya senang telah memilih Kaba sebagai tempat belajar saya.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>

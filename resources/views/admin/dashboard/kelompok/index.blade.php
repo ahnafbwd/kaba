@@ -64,7 +64,7 @@
                                     <form action="/admin/kelompok/{{ $kelompok->kode_kelas }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $kelompok->kode_kelas }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $kelompok->kode_kelas }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $kelompok->kode_kelas }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

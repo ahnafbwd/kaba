@@ -55,16 +55,16 @@
                                 <td>{{ $program->harga }}</td>
                                 <td>{{ $program->kuota_siswa }}</td>
                                 <td class="text-center">
-                                    <a href="/admin/program/{{ $program->kode_program }}" class="btn btn-info btn-circle btn-sm">
+                                    <a href="{{ route('admin.program.show', $program->kode_program) }}" class="btn btn-info btn-circle btn-sm">
                                         <i class="fas fa-info-circle"></i>
                                     </a>
-                                    <a href="/admin/program/{{ $program->kode_program }}/edit" class="btn btn-warning btn-circle btn-sm">
+                                    <a href="{{ route('admin.program.edit', $program->kode_program) }}" class="btn btn-warning btn-circle btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <form action="/admin/program/{{ $program->kode_program }}" method="post" class="d-inline">
+                                    <form action="{{ route('admin.program.destroy', $program->kode_program) }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $program->kode_program }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $program->kode_program }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $program->kode_program }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

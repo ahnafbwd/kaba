@@ -70,7 +70,7 @@
                                     <form action="/admin/pendaftaran/{{ $pendaftaran->kode_pendaftaran }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pendaftaran->kode_pendaftaran }}"><i class="fas fa-trash"></i></button>
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger" data-bs-toggle="modal" data-bs-target="#basicModal{{ $pendaftaran->kode_pendaftaran }}"><i class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $pendaftaran->kode_pendaftaran }}" tabindex="-1">
                                             <div class="modal-dialog">
                                               <div class="modal-content">

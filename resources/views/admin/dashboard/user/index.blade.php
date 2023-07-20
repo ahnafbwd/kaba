@@ -66,7 +66,7 @@
                                         class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button type="button" class="btn btn-danger btn-circle btn-sm"
+                                        <button type="button" class="btn btn-danger btn-circle btn-sm bg-danger"
                                             data-bs-toggle="modal" data-bs-target="#basicModal{{ $user->kode_user }}"><i
                                                 class="fas fa-trash"></i></button>
                                         <div class="modal fade" id="basicModal{{ $user->kode_user }}" tabindex="-1">
