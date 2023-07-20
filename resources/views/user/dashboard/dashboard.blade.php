@@ -21,13 +21,13 @@
         </div>
         {{-- <div class="gallery" style="display: flex; align-items: center; column-gap: 20px; overflow-x: scroll; scroll-snap-type: x mandatory;">
             <div class="gallery__item" style="scroll-snap-align: center; min-width: 75%;">
-                <img src="{{ asset('/home/img/course-1.jpg') }}" class="gallery__image" alt="program" style="width: 100%; height:100%; object-fit:cover;">
+                <img src="{{ asset('/img/course-1.jpg') }}" class="gallery__image" alt="program" style="width: 100%; height:100%; object-fit:cover;">
             </div>
             <div class="gallery__item" style="scroll-snap-align: center; min-width: 75%;">
-                <img src="{{ asset('/home/img/course-1.jpg') }}" class="gallery__image" alt="program" style="width: 100%; height:100%; object-fit:cover;">
+                <img src="{{ asset('/img/course-1.jpg') }}" class="gallery__image" alt="program" style="width: 100%; height:100%; object-fit:cover;">
             </div>
             <div class="gallery__item" style="scroll-snap-align: center; min-width: 75%;">
-                <img src="{{ asset('/home/img/course-1.jpg') }}" class="gallery__image" alt="program" style="width: 100%; height:100%; object-fit:cover;">
+                <img src="{{ asset('/img/course-1.jpg') }}" class="gallery__image" alt="program" style="width: 100%; height:100%; object-fit:cover;">
             </div>
         </div> --}}
         <div class="row">
@@ -43,7 +43,7 @@
                         <div class="col-lg-6 col-md-6 d-flex align-items-stretch mb-4 " data-aos="zoom-out"
                             data-aos-delay="100">
                             <div class="course-item bg-white">
-                                <img src="{{ asset('/home/img/course-1.jpg') }}" class="img-fluid" alt="...">
+                                <img src="{{ asset('/img/course-1.jpg') }}" class="img-fluid" alt="...">
                                 <div class="course-content">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h4>{{ $program->nama_tingkat ?: $program->kode_tingkat }}</h4>
@@ -95,7 +95,7 @@
                             @if ($programnya)
                                 <div class="mt-2 mb-2">
                                         <div class="course-item">
-                                    <img src="{{ asset('/home/img/course-1.jpg') }}" class="img-fluid" alt="...">
+                                    <img src="{{ asset('/img/course-1.jpg') }}" class="img-fluid" alt="...">
                                 <div class="course-content">
                                     {{-- <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h4>{{ $program->nama_tingkat ?: $programnya->kode_tingkat }}</h4>

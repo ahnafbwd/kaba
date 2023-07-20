@@ -64,13 +64,31 @@
                                             <x-input-error :messages="$errors->get('deskripsi')" class="mt-2" />
                                         </div>
                                         <!-- Modul -->
-                                        <div class="col-lg-6 mt-2">
+                                        {{-- <div class="col-lg-6 mt-2">
                                             <x-input-label for="modul" :value="__('Modul')" />
-                                              <div class="input-group block mt-1 w-full mb-3">
+                                              <div class="input-group  mt-1 w-full mb-3">
                                                 <input type="file" class="form-control " id="modul" placeholder="Upload Modul" name="modul" required>
                                                 <label class="input-group-text bg-dark text-white " for="modul">Upload</label>
                                               </div>
-
+                                              <div class="input-group  mt-1 w-full mb-3">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input form-control" id="modul" name="modul" placeholder="Upload Modul" required>
+                                                    <label class="custom-file-label" for="modul">Choose File</label>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" type="button">Upload</button>
+                                                </div>
+                                            </div>
+                                            <x-input-error :messages="$errors->get('modul')" class="mt-2" />
+                                        </div> --}}
+                                        <div class="col-lg-6 mt-3">
+                                            <x-input-label for="modul" :value="__('Modul')" />
+                                            <div class="input-group  w-full mb-3">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="modul" name="modul" required>
+                                                    <label class="custom-file-label" for="modul">Choose File</label>
+                                                </div>
+                                            </div>
                                             <x-input-error :messages="$errors->get('modul')" class="mt-2" />
                                         </div>
                                     </div>
@@ -87,4 +105,16 @@
             </div>
         </div>
     </div>
+    <script>
+        // Add an event listener to the file input
+        const fileInput = document.getElementById('modul');
+        fileInput.addEventListener('change', function() {
+            // Get the selected file name
+            const fileName = this.files[0].name;
+            // Update the label text with the selected file name
+            const label = this.nextElementSibling;
+            label.innerHTML = fileName;
+        });
+    </script>
+
 @endsection

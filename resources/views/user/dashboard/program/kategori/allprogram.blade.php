@@ -14,7 +14,7 @@
             @foreach ($programs as $program)
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4 ">
                     <div class="course-item shadow bg-white">
-                        <img src="{{ asset('/home/img/course-1.jpg') }}" class="img-fluid"
+                        <img src="{{ asset('/img/course-1.jpg') }}" class="img-fluid"
                             style="border-top-left-radius: 10px; border-top-right-radius: 10px;" alt="...">
                         <div class="course-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">

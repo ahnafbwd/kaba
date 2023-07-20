@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('jumlah_pembayaran', 16, 2);
             $table->string('status_pembayaran');
             $table->string('status_pendaftaran');
-            $table->timestamps('tanggal_pendaftaran')->useCurrent();
+            $table->timestamp('tanggal_pendaftaran')->useCurrent();
             $table->timestamp('tanggal_pembayaran')->nullable();
             $table->timestamps();
         });

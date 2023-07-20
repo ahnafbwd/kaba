@@ -16,7 +16,7 @@
 
       <div class="row">
         <div class="col-lg-8">
-          <img src="{{ asset('/home/img/course-1.jpg')}}" class="img-fluid" alt="">
+          <img src="{{ asset('/img/programe.jpg')}}" class="img-fluid" alt="">
           <h3>{{ $program->nama_program }}</h3>
           <p>
             {{ $program->deskripsi }}

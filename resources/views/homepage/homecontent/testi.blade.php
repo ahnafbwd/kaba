@@ -14,7 +14,7 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
                     <h3>Muhammad Farhan</h3>
                     <h4>Pelajar</h4>
@@ -36,7 +36,7 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
                     <h3>Ali Rizki</h3>
                     <h4>Pelajar</h4>
@@ -58,7 +58,7 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
                     <h3>Ahmad Malik</h3>
                     <h4>Pelajar</h4>
@@ -80,7 +80,7 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
                     <h3>Yusuf Abdullah</h3>
                     <h4>Pelajar</h4>
@@ -102,7 +102,7 @@
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <div class="d-flex align-items-center">
-                  <img src="{{ asset('img/testimonials/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
+                  <img src="{{ asset('img/testi.png')}}" class="testimonial-img flex-shrink-0" alt="">
                   <div>
                     <h3>Omar Said</h3>
                     <h4>Pelajar</h4>

@@ -10867,7 +10867,7 @@ a:focus {
 }
 
 .bg-register-image {
-  background:url("{{ asset('/home/img/loggo.svg') }}");
+  background:url("{{ asset('/img/loggo.svg') }}");
   background-position: center;
   background-size: cover;
 }

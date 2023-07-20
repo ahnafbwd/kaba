@@ -20,7 +20,7 @@
         @foreach ($programs as $program)
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4" data-aos="zoom-out" data-aos-delay="100">
           <div class="course-item">
-            <img src="{{ asset('/home/img/course-1.jpg')}}" class="img-fluid" alt="...">
+            <img src="{{ asset('/img/programe.jpg')}}" class="img-fluid" alt="...">
             <div class="course-content">
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <h4>{{ $program->tingkat->nama_tingkat }}</h4>

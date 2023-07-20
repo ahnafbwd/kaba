@@ -21,13 +21,13 @@
     <link href="{{ asset('/home/css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <link rel="stylesheet" href="/userdashboard/vendors/feather/feather.css">
-    <link rel="stylesheet" href="/userdashboard/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="/userdashboard/vendors/css/vendor.bundle.base.css'">
+    <link rel="stylesheet" href="/vendor/feather/feather.css">
+    <link rel="stylesheet" href="/vendor/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/vendor/css/vendor.bundle.base.css'">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="/userdashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="/userdashboard/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/vendor/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/vendor/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" type="text/css" href="/userdashboardjs/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
@@ -71,12 +71,12 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     @include('user.dashboard.layouts.footer')
     <!-- plugins:js -->
-    <script src="/userdashboard/vendors/js/vendor.bundle.base.js"></script>
+    <script src="/vendor/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="/userdashboard/vendors/chart.js/Chart.min.js"></script>
-    <script src="/userdashboard/vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="/userdashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="/vendor/chart.js/Chart.min.js"></script>
+    <script src="/vendor/datatables.net/jquery.dataTables.js"></script>
+    <script src="/vendor/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <script src="/userdashboard/js/dataTables.select.min.js"></script>
 
     <!-- End plugin js for this page -->

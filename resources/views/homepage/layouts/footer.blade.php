@@ -30,10 +30,10 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Program Kami</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Belajar Bahasa Arab Pemula</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Belajar Bahasa Arab Menengah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/program">Belajar Bahasa Arab </a></li>
+              {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Belajar Bahasa Arab Menengah</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Belajar Bahasa Arab Tingkat Lanjut</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Belajar Bahasa Arab Profesional</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Belajar Bahasa Arab Profesional</a></li> --}}
             </ul>
           </div>
 
@@ -60,12 +60,12 @@
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">Fahns</a>
+          Designed by Fahns
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=6285947366464&text=Assalamualaikum+admin+Kaba%2C+saya+ingin+bertanya..&type=phone_number&app_absent=0" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://www.instagram.com/kabaofficial.id/" class="instagram"><i class="bx bxl-instagram"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->

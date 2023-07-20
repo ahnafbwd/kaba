@@ -15,7 +15,7 @@
         <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
           <div class="team-member">
             <div class="member-img">
-              <img src="{{ asset('img/testimonials/testi.png')}}" class="img-fluid" alt="">
+              <img src="{{ asset('img/testi.png')}}" class="img-fluid" alt="">
             </div>
             <div class="member-info">
               <div class="social">

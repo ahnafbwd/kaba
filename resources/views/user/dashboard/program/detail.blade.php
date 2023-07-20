@@ -29,7 +29,7 @@
                     <div class="row-md-7 grid-margin stretch-card">
                         <div class="card shadow">
                             <div class="card-body">
-                                <img src="{{ asset('/home/img/course-1.jpg') }}" class="img-fluid mb-2"
+                                <img src="{{ asset('/img/course-1.jpg') }}" class="img-fluid mb-2"
                                     style="border-top-left-radius: 10px; border-top-right-radius: 10px;" alt="...">
                                 <h6 class="font-weight-800 h3 mb-3 mt-3">
                                     <span><strong>{{ $program->nama_program }}</strong></span>
